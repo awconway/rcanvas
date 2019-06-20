@@ -68,3 +68,15 @@ update_discussion_id <- function(discussion_id, object_id, message,
                per_page = 100)
   canvas_query(url, args, "PUT")
 }
+
+
+get_discussion_view <- function(discussion_id, object_id, object_type = "courses") {
+  stopifnot(object_type %in% c("courses", "groups"))
+  url <- paste0(canvas_url(),
+                paste(object_type, object_id, "discussion_topics", discussion_id, "view", sep = "/"))
+  args <- list(per_page = 100)
+  include <- iter_args_list(NULL, "include[]")
+  args <- c(args, include)
+  dat <- process_response(url, args)
+  dat
+}
