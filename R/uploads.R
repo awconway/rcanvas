@@ -96,7 +96,6 @@ create_course_folder <- function(course_id, name, parent_folder_id = NULL) {
 #' @param omit_from_final_grade boolean - Whether this assignment is counted towards a student's final grade.
 #' @param quiz_lti boolean - Whether this assignment should use the Quizzes 2 LTI tool. Sets the submission type to 'external_tool' and configures the external tool attributes to use the Quizzes 2 LTI tool configured for this course. Has no effect if no Quizzes 2 LTI tool is configured.
 #'
-#' @return
 #' @export
 #'
 #' @examples

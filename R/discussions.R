@@ -73,10 +73,9 @@ update_discussion_id <- function(discussion_id, object_id, message,
 #' * `get_discussion_view`: view discussion by id
 #'
 #' @param discussion_view  view topic
-#' @rdname get_discussions_context
 #' @return view of discussion
 #' @export
-#' @md
+#' @rdname get_discussion_view
 #'
 get_discussion_view <- function(discussion_id, object_id, object_type = "courses") {
   stopifnot(object_type %in% c("courses", "groups"))
