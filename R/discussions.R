@@ -69,7 +69,15 @@ update_discussion_id <- function(discussion_id, object_id, message,
   canvas_query(url, args, "PUT")
 }
 
-
+#'
+#' * `get_discussion_view`: view discussion by id
+#'
+#' @param discussion_view  view topic
+#' @rdname get_discussions_context
+#' @return view of discussion
+#' @export
+#' @md
+#'
 get_discussion_view <- function(discussion_id, object_id, object_type = "courses") {
   stopifnot(object_type %in% c("courses", "groups"))
   url <- paste0(canvas_url(),
